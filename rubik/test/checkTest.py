@@ -11,6 +11,14 @@ class CheckTest(TestCase):
         status = result.get('status', None)
         self.assertEqual(status, 'ok')
         
+    def test_check_numbers(self):
+        parm = {'op':'check',
+                'cube':'111111111222222222333333333444444444555555555666666666'}
+        result = check._check(parm)
+        self.assertIn('status', result)
+        status = result.get('status', None)
+        self.assertEqual(status, 'ok')
+    
     # sad path 
     def test_check_length(self):
         parm = {'op':'check',
