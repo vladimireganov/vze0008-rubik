@@ -26,7 +26,7 @@ def _check(parms):
             result['status'] = 'error: not 9 occurences'
             return result
     middle_face = []
-    middle_face.append(encodedCube[4])
+    middle_face.append(encodedCube[5])
     middle_face.append(encodedCube[14])
     middle_face.append(encodedCube[23])
     middle_face.append(encodedCube[32])
